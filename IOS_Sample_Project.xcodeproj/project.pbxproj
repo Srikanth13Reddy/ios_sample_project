@@ -16,6 +16,15 @@
 		30352E92294B99A100D0A793 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30352E91294B99A100D0A793 /* CustomButton.swift */; };
 		30352E97294B9AA600D0A793 /* OutlinedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30352E96294B9AA600D0A793 /* OutlinedTextFieldStyle.swift */; };
 		30352E9A294BA5C700D0A793 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30352E99294BA5C700D0A793 /* CenterModifier.swift */; };
+		30C7210A294CDCDA000DE315 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C72109294CDCDA000DE315 /* PostData.swift */; };
+		30C7210E294CE800000DE315 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C7210D294CE800000DE315 /* LoginModel.swift */; };
+		30C72110294CF314000DE315 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C7210F294CF314000DE315 /* ProgressBar.swift */; };
+		30C72116294D084E000DE315 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C72115294D084E000DE315 /* LoginResponse.swift */; };
+		30C72118294D085B000DE315 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C72117294D085B000DE315 /* LoginRequest.swift */; };
+		30C7211A294D0947000DE315 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C72119294D0947000DE315 /* LoginViewModel.swift */; };
+		30C7211C294D0964000DE315 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C7211B294D0964000DE315 /* LoginValidation.swift */; };
+		30C72121294D0A82000DE315 /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C72120294D0A82000DE315 /* LoginResource.swift */; };
+		30C72123294D0ACC000DE315 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C72122294D0ACC000DE315 /* HttpUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +39,15 @@
 		30352E91294B99A100D0A793 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		30352E96294B9AA600D0A793 /* OutlinedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextFieldStyle.swift; sourceTree = "<group>"; };
 		30352E99294BA5C700D0A793 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
+		30C72109294CDCDA000DE315 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		30C7210D294CE800000DE315 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		30C7210F294CF314000DE315 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		30C72115294D084E000DE315 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		30C72117294D085B000DE315 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		30C72119294D0947000DE315 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		30C7211B294D0964000DE315 /* LoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
+		30C72120294D0A82000DE315 /* LoginResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
+		30C72122294D0ACC000DE315 /* HttpUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +80,15 @@
 		30352E77294B7E3800D0A793 /* IOS_Sample_Project */ = {
 			isa = PBXGroup;
 			children = (
+				30C7211F294D0A6D000DE315 /* Resource */,
+				30C72114294D0785000DE315 /* ViewModel */,
+				30C72113294D0773000DE315 /* Validation */,
 				30352E98294BA59300D0A793 /* Modifier */,
 				30352E95294B9A9100D0A793 /* Styles */,
 				30352E8C294B928F00D0A793 /* Utility */,
 				30352E89294B7F1300D0A793 /* IOS-Sample-Project-Info.plist */,
 				30352E88294B7EA600D0A793 /* Model */,
-				30352E87294B7E9900D0A793 /* View */,
+				30352E87294B7E9900D0A793 /* Views */,
 				30352E86294B7E8F00D0A793 /* App */,
 				30352E7C294B7E3A00D0A793 /* Assets.xcassets */,
 				30352E7E294B7E3A00D0A793 /* Preview Content */,
@@ -86,24 +107,29 @@
 		30352E86294B7E8F00D0A793 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				30352E8A294B8D1300D0A793 /* LoginPageView.swift */,
 				30352E78294B7E3800D0A793 /* IOS_Sample_ProjectApp.swift */,
 				30352E7A294B7E3800D0A793 /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		30352E87294B7E9900D0A793 /* View */ = {
+		30352E87294B7E9900D0A793 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				30352E8A294B8D1300D0A793 /* LoginPageView.swift */,
 				30352E91294B99A100D0A793 /* CustomButton.swift */,
+				30C7210F294CF314000DE315 /* ProgressBar.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		30352E88294B7EA600D0A793 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30C72112294D0735000DE315 /* Request */,
+				30C72111294D072A000DE315 /* Response */,
+				30C72109294CDCDA000DE315 /* PostData.swift */,
+				30C7210D294CE800000DE315 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +137,7 @@
 		30352E8C294B928F00D0A793 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				30C72122294D0ACC000DE315 /* HttpUtility.swift */,
 				30352E8F294B92FC00D0A793 /* CustomShape.swift */,
 			);
 			path = Utility;
@@ -130,6 +157,46 @@
 				30352E99294BA5C700D0A793 /* CenterModifier.swift */,
 			);
 			path = Modifier;
+			sourceTree = "<group>";
+		};
+		30C72111294D072A000DE315 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				30C72115294D084E000DE315 /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		30C72112294D0735000DE315 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				30C72117294D085B000DE315 /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		30C72113294D0773000DE315 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				30C7211B294D0964000DE315 /* LoginValidation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		30C72114294D0785000DE315 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30C72119294D0947000DE315 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30C7211F294D0A6D000DE315 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				30C72120294D0A82000DE315 /* LoginResource.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,12 +269,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C72123294D0ACC000DE315 /* HttpUtility.swift in Sources */,
 				30352E90294B92FC00D0A793 /* CustomShape.swift in Sources */,
+				30C72121294D0A82000DE315 /* LoginResource.swift in Sources */,
+				30C72110294CF314000DE315 /* ProgressBar.swift in Sources */,
+				30C7210A294CDCDA000DE315 /* PostData.swift in Sources */,
+				30C72118294D085B000DE315 /* LoginRequest.swift in Sources */,
 				30352E7B294B7E3800D0A793 /* ContentView.swift in Sources */,
 				30352E79294B7E3800D0A793 /* IOS_Sample_ProjectApp.swift in Sources */,
 				30352E9A294BA5C700D0A793 /* CenterModifier.swift in Sources */,
+				30C7210E294CE800000DE315 /* LoginModel.swift in Sources */,
+				30C7211A294D0947000DE315 /* LoginViewModel.swift in Sources */,
 				30352E8B294B8D1300D0A793 /* LoginPageView.swift in Sources */,
+				30C7211C294D0964000DE315 /* LoginValidation.swift in Sources */,
 				30352E92294B99A100D0A793 /* CustomButton.swift in Sources */,
+				30C72116294D084E000DE315 /* LoginResponse.swift in Sources */,
 				30352E97294B9AA600D0A793 /* OutlinedTextFieldStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

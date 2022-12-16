@@ -11,6 +11,9 @@ struct LoginPageView: View {
     
     @State var email: String = ""
     @State var password: String = ""
+ 
+    @State var isLoading: Bool = false
+    @ObservedObject var loginViewModel = LoginViewModel()
     
     var body: some View {
         ZStack{
@@ -24,14 +27,15 @@ struct LoginPageView: View {
                 VStack(alignment:.leading)
                 {
                     Image("login_logo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 250,height: 120)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 250,height: 120)
                         .modifier(CenterModifier())
+                    
                     Text("Email")
                         .foregroundColor(Color.blue)
                         .font(.system(size: 16))
-                    TextField("Enter your password", text: $email)
+                    TextField("Enter your email", text: $email).keyboardType(.emailAddress)
                         .padding(.all,12)
                       .font(Font.system(size: 15, weight: .medium, design: .serif))
                       .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1))
@@ -48,14 +52,22 @@ struct LoginPageView: View {
                         .onTapGesture {
                             print(email)
                             print(password)
+                        
                         }.padding(.top,50)
-
-                            
+                    
 
                 }.padding(.horizontal,30)
             }
+            ProgressBar(isLoading: false)
                 
         }.ignoresSafeArea(.all, edges: .all)
+            .onAppear() {
+               
+            }
+        
+       
+        
+        
     }
 }
 
